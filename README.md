@@ -33,7 +33,7 @@ We will replace closing Head tag with the script to inject the js file
 ```
   </head> -> <script src="https://cdn.jsdelivr.net/gh/itsaviu/proxy-poc@1.0/support.js"></script></head>   # Alert Msg
         or
-  </head> -> <script src="https://cdn.jsdelivr.net/gh/itsaviu/proxy-poc@1.0/script.js"></script></head>   # Amazon & relicx website
+  </head> -> <script src="https://cdn.jsdelivr.net/gh/itsaviu/proxy-poc@1.1/script.js"></script></head>   # Amazon & relicx website
 ```
 - Once done click `ok`, rewrite is done
 
