@@ -42,14 +42,5 @@ window.onload = function() {
             ebay_carousel.replaceWith(ebay_carousel_replacer)
             ebay_carousel_replacer.style.cssText="text-align: center;margin-top: 5rem;font-size: 4rem;"
         }
-    } else {
-        body = document.getElementsByTagName('body')[0];
-        notcreated = document.createElement('marquee');
-        notcreated.innerText = 'NO SCRIPT TO MODIFY THE WEBSITE';
-        notcreated.style.background="greenyellow";
-        notcreated.style.zIndex="1000";
-        notcreated.style.position="absolute";
-        body.prepend(notcreated);
-        console.log('Random website !!!');
-    }
+    } 
 }

@@ -41,3 +41,35 @@ We will replace closing Head tag with the script to inject the js file
 ### Test
 - Open Chrome browser
 - Go to Amazon website, you will see the changes in Navigation logo (Logic written)
+
+
+### Steps to connect with Charles Proxy
+- Charles proxy is running in EC2, port 8888
+- Currently deployed app instance Domain name
+```
+    ec2-54-224-233-208.compute-1.amazonaws.com
+```
+- Ec2 Detail : https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#InstanceDetails:instanceId=i-09725ac6065daca43
+- Connect to 
+```
+    ssh -i "charles-proxy.pem" ubuntu@ec2-54-224-233-208.compute-1.amazonaws.com
+```
+- Start charles App
+```
+ nohup charles -headless -config ./charles-custom.config &
+```
+- Update your Proxy ip in network, below step is for macos
+    - Got System Preferences -> Network -> Advanced 
+    - Navigate to `Proxy` Tab
+    - Check `Secure Web Proxy (HTTPS)`
+    - In right pane add the proxy server detail
+    - Proxy server : ec2-54-224-233-208.compute-1.amazonaws.com
+    - Port : 8888
+    - Hit `Ok` & `Apply` changes
+
+
+
+
+
+
+ 
