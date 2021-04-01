@@ -100,6 +100,7 @@ window.onload = function() {
             console.log('start-purchase')
             document.getElementById('__next').addEventListener("DOMCharacterDataModified",
                     function(event) { 
+                        document.getElementsByClassName('🏠-3sFrx')[0].replaceWith(better_replacer)
                         child_element = document.getElementsByClassName('🏠-QtpCE')[0].children[0].children[0]
                         // console.log(child_element)
                         child_element.style.cssText=BORDER_STYLE
