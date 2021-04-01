@@ -96,9 +96,9 @@ window.onload = function() {
                 elements[i].style.cssText = "font-size:1px"
             }
         }
-        else if(location.pathname.substring(1).includes('start-purchase')) {
-            console.log('Starting purchase')    
-        }
+        // else if(location.pathname.substring(1).includes('start-purchase')) {
+        //     console.log('Starting purchase')    
+        // }
         // else if( uri.includes('start-purchase')) {
         //     console.log('start-purchase')
         //     document.getElementsByClassName('styles_fixedContainer__38tWa')[0].children[0]
