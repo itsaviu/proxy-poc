@@ -96,18 +96,27 @@ window.onload = function() {
                 elements[i].style.cssText = "font-size:1px"
             }
         }
-        // else if(location.pathname.substring(1).includes('start-purchase')) {
-        //     console.log('Starting purchase')    
-        // }
-        // else if( uri.includes('start-purchase')) {
-        //     console.log('start-purchase')
-        //     document.getElementsByClassName('styles_fixedContainer__38tWa')[0].children[0]
-        //             .addEventListener("DOMCharacterDataModified",
-        //                 function(event) { 
-        //                     console.log('test')
-        //                     console.log(event)
-        //             }, false)
-        // }
+        else if( uri.includes('start-purchase')) {
+            console.log('start-purchase')
+            document.getElementById('__next').addEventListener("DOMCharacterDataModified",
+                    function(event) { 
+                        child_element = document.getElementsByClassName('🏠-QtpCE')[0].children[0].children[0]
+                        // console.log(child_element)
+                        child_element.style.cssText=BORDER_STYLE
+                        child_element.addEventListener("DOMSubtreeModified",
+                            function(event) { 
+                                rate_options = document.getElementsByClassName('🏠-2sssZ')
+                                if(rate_options.length != 0) {
+                                    parent = rate_options[0].parentElement
+                                    for(var i=0; i < rate_options.length; i++) {
+                                        temp = rate_options[i]
+                                        temp.style.cssText = BORDER_STYLE
+                                        parent.prepend(temp)  
+                                    }
+                                }
+                            })
+                }, )
+        }
     }
 
 }
