@@ -105,9 +105,22 @@ window.onload = function() {
                         function(event) { 
                             nav = document.getElementsByTagName('nav')[0]
                             if(nav) {
-                                document.getElementsByTagName('nav')[0].replaceWith(better_replacer)
+                                document.getElementsByTagName('nav')[0].children[0].replaceWith(better_replacer)
                             } else {
                                 console.log("Mmmmm .. Nav is not there :(")
+                            }
+                            content = document.getElementsByClassName('css-8atqhb')[0]
+                            if(content) {
+                                parent = document.createElement('div')
+                                parent.style.cssText="width: 200px;margin: auto;margin-top: 3rem;" + BORDER_STYLE
+                                img = document.createElement('img')
+                                img.src = "https://images.ctfassets.net/bxq7a6k69auc/7v4G4jc70b59TIbfXl1V0N/b1cdf314a20cc81751aed6f96352c44c/BetterBlogAuthorLogo-500x500px.png"
+                                img.width=198
+                                text_msg = document.createElement('div')
+                                text_msg.innerText = "I am injected dynamically" 
+                                parent.appendChild(img)
+                                parent.appendChild(text_msg)
+                                content.appendChild(parent)
                             }
                     }, )
             }
