@@ -53,6 +53,7 @@ window.onload = function() {
         // let main = document.querySelector('main');
         // console.log(main.children)
         let uri = location.pathname.substring(1)
+        console.log(uri)
         if(uri === '') {
             better_logo.replaceWith(better_replacer)
             let children = document.querySelector('main').children;
