@@ -97,7 +97,7 @@ window.onload = function() {
                 elements[i].style.cssText = "font-size:1px"
             }
         }
-        else if( uri != 'preapprovals/purchase' && uri.includes('preapprovals')) {
+        else if( uri != 'preapprovals/purchase' && uri.includes('preapproval')) {
             console.log('start-purchase')
             root = document.getElementById('__next')
             if(root) {
