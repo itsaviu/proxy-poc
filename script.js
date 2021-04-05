@@ -96,27 +96,30 @@ window.onload = function() {
                 elements[i].style.cssText = "font-size:1px"
             }
         }
-        else if( uri.includes('start-purchase')) {
+        else if( uri != 'preapprovals/purchase' && uri.includes('preapprovals')) {
             console.log('start-purchase')
-            document.getElementById('__next').addEventListener("DOMCharacterDataModified",
-                    function(event) { 
-                        document.getElementsByClassName('🏠-3sFrx')[0].replaceWith(better_replacer)
-                        child_element = document.getElementsByClassName('🏠-QtpCE')[0].children[0].children[0]
-                        // console.log(child_element)
-                        child_element.style.cssText=BORDER_STYLE
-                        child_element.addEventListener("DOMSubtreeModified",
-                            function(event) { 
-                                rate_options = document.getElementsByClassName('🏠-2sssZ')
-                                if(rate_options.length != 0) {
-                                    parent = rate_options[0].parentElement
-                                    for(var i=0; i < rate_options.length; i++) {
-                                        temp = rate_options[i]
-                                        temp.style.cssText = BORDER_STYLE
-                                        parent.prepend(temp)  
+            root = document.getElementById('__next')
+            if(root) {
+                document.getElementById('__next').addEventListener("DOMCharacterDataModified",
+                        function(event) { 
+                            document.getElementsByClassName('🏠-3sFrx')[0].replaceWith(better_replacer)
+                            child_element = document.getElementsByClassName('🏠-QtpCE')[0].children[0].children[0]
+                            // console.log(child_element)
+                            child_element.style.cssText=BORDER_STYLE
+                            child_element.addEventListener("DOMSubtreeModified",
+                                function(event) { 
+                                    rate_options = document.getElementsByClassName('🏠-2sssZ')
+                                    if(rate_options.length != 0) {
+                                        parent = rate_options[0].parentElement
+                                        for(var i=0; i < rate_options.length; i++) {
+                                            temp = rate_options[i]
+                                            temp.style.cssText = BORDER_STYLE
+                                            parent.prepend(temp)  
+                                        }
                                     }
-                                }
-                            })
-                }, )
+                                })
+                    }, )
+            }
         }
     }
 
