@@ -102,22 +102,12 @@ window.onload = function() {
             if(root) {
                 document.getElementById('__next').addEventListener("DOMCharacterDataModified",
                         function(event) { 
-                            document.getElementsByClassName('🏠-3sFrx')[0].replaceWith(better_replacer)
-                            child_element = document.getElementsByClassName('🏠-QtpCE')[0].children[0].children[0]
-                            // console.log(child_element)
-                            child_element.style.cssText=BORDER_STYLE
-                            child_element.addEventListener("DOMSubtreeModified",
-                                function(event) { 
-                                    rate_options = document.getElementsByClassName('🏠-2sssZ')
-                                    if(rate_options.length != 0) {
-                                        parent = rate_options[0].parentElement
-                                        for(var i=0; i < rate_options.length; i++) {
-                                            temp = rate_options[i]
-                                            temp.style.cssText = BORDER_STYLE
-                                            parent.prepend(temp)  
-                                        }
-                                    }
-                                })
+                            nav = document.getElementsByTagName('nav')[0]
+                            if(nav) {
+                                document.getElementsByTagName('nav')[0].replaceWith(better_replacer)
+                            } else {
+                                console.log("Mmmmm .. Nav is not there :(")
+                            }
                     }, )
             }
         }
